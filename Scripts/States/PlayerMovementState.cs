@@ -8,6 +8,8 @@ public class PlayerMovementState : PlayerBaseState
     [field: SerializeField] private float currentSpeed;
     [field: SerializeField] private bool isSprinting;
     private Vector3 Momentum;
+    private float CyoteeTime = 0.11666666666f;
+    private float CyoteeTimer;
 
     public override void Enter()
     {
@@ -16,8 +18,11 @@ public class PlayerMovementState : PlayerBaseState
         stateMachine.InputReader.JumpEvent += OnJump;
         stateMachine.InputReader.SprintEvent +=OnSprint;
         stateMachine.InputReader.CrouchEvent += OnCrouch;
+        CyoteeTime=0;
+        stateMachine.isSprinting = false;
 
         stateMachine.ClearJumpCounter();
+        stateMachine.ClearDashCounter();
 
         Debug.Log("Entering movement state");
     }
@@ -31,7 +36,16 @@ public class PlayerMovementState : PlayerBaseState
             isSprinting = false;
             currentSpeed = stateMachine.PlayerSpeed;
         }
-        if(!CheckIfGrounded()) stateMachine.SwitchState(new PlayerFallState(stateMachine));
+        if(CheckIfGrounded()) {
+            CyoteeTimer=0;
+            return;
+        }
+
+        CyoteeTimer+=Time.deltaTime;
+        if (CyoteeTimer >= CyoteeTime)
+        {
+            stateMachine.SwitchState(new PlayerFallState(stateMachine));
+        }
     }
     public override void Exit()
     {
@@ -48,12 +62,12 @@ public class PlayerMovementState : PlayerBaseState
         if(isSprinting) 
         {
             currentSpeed = stateMachine.PlayerSpeed;
-            isSprinting = false;
+            stateMachine.isSprinting = false;
         }
         else
         {
             currentSpeed = stateMachine.PlayerSprintSpeed;
-            isSprinting = true;
+            stateMachine.isSprinting = true;
         }
     }
     private void OnCrouch()
@@ -61,5 +75,4 @@ public class PlayerMovementState : PlayerBaseState
         if(isSprinting)stateMachine.SwitchState(new PlayerSlideState(stateMachine));
         if(!isSprinting)stateMachine.SwitchState(new PlayerCrouchState(stateMachine));
     }
-    
 }

@@ -7,8 +7,8 @@ public class PlayerStateMachine : StateMachine
 {
     [field:SerializeField] public InputController InputReader { get; private set; }
     [field:SerializeField] public ForceReceiver forceReceiver {get; private set;}
-    [field:SerializeField] public GameObject playerGameobject {get; private set;}
-    [field:SerializeField] public Rigidbody playerRigidbody {get; private set;} 
+    [field:SerializeField] public GameObject playerGameobject { get; private set;}
+    [field:SerializeField] public Rigidbody2D playerRigidbody {get; private set;} 
     [field: SerializeField] public float PreviousDodgeTime { get; private set; } = Mathf.NegativeInfinity;
     [field: SerializeField] public float MovementDeadZone { get; private set; }
     [field: SerializeField] public float PlayerSpeed { get; private set; }
@@ -17,11 +17,14 @@ public class PlayerStateMachine : StateMachine
     [field: SerializeField] public float PlayerJumpHeight { get; private set; }
     [field: SerializeField] public float PlayerJumpCount { get; private set; }
     [field: SerializeField] public float PlayerJumpCounter { get; private set; }
-    [field: SerializeField] public float PlayerDashForce {get;private set;}
+    [field: SerializeField] public float PlayerDashDistance {get;private set;}
+    [field: SerializeField] public float PlayerDashCount {get;private set;}
+    [field: SerializeField] public float PlayerDashCounter {get;private set;}
     [field: SerializeField] public float PlayerDashTimer {get;private set;}
     [field: SerializeField] public float PlayerDashDelay {get;private set;}
     [field: SerializeField] public int PlayerId { get; private set; } = 1;
     [field: SerializeField] public HealthHandler health { get; private set; }
+    [field:SerializeField] public bool isSprinting;
     private void Start()
     {
         if(PlayerId == 0)
@@ -65,6 +68,14 @@ public class PlayerStateMachine : StateMachine
     public void ClearDashTimer()
     {
         PlayerDashTimer+=0;
+    }
+    public void IncreaseDashCounter()
+    {
+        PlayerDashCounter+=1;
+    }
+    public void ClearDashCounter()
+    {
+        PlayerDashCounter=0;
     }
     public void IncreaseJumpCounter()
     {

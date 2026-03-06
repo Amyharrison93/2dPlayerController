@@ -148,12 +148,9 @@ GameObject:
   - component: {fileID: 8862429999930712331}
   - component: {fileID: 3986950735061004326}
   - component: {fileID: 5460643324036599968}
-  - component: {fileID: 8285244588918361719}
-  - component: {fileID: 8946009132170747548}
   - component: {fileID: 5364160949809310649}
   - component: {fileID: 6005227837528910574}
   - component: {fileID: 8294699905193256548}
-  - component: {fileID: 3667855994721234672}
   m_Layer: 0
   m_Name: player
   m_TagString: Untagged
@@ -234,54 +231,6 @@ MeshRenderer:
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &8285244588918361719
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 698296741725185137}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!54 &8946009132170747548
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 698296741725185137}
-  serializedVersion: 5
-  m_Mass: 1
-  m_LinearDamping: 0
-  m_AngularDamping: 0.05
-  m_CenterOfMass: {x: 0, y: 0, z: 0}
-  m_InertiaTensor: {x: 1, y: 1, z: 1}
-  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ImplicitCom: 1
-  m_ImplicitTensor: 1
-  m_UseGravity: 1
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 120
-  m_CollisionDetection: 1
 --- !u!114 &5364160949809310649
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -308,9 +257,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerStateMachine
   <InputReader>k__BackingField: {fileID: 5364160949809310649}
-  <forceReceiver>k__BackingField: {fileID: 3667855994721234672}
   <playerGameobject>k__BackingField: {fileID: 698296741725185137}
-  <playerRigidbody>k__BackingField: {fileID: 8946009132170747548}
+  <physicsHandler>k__BackingField: {fileID: 0}
   <PreviousDodgeTime>k__BackingField: -Infinity
   <MovementDeadZone>k__BackingField: 0
   <PlayerSpeed>k__BackingField: 5
@@ -340,17 +288,3 @@ MonoBehaviour:
   MaxHealth: 100
   isDead: 0
   IsDead: 0
---- !u!114 &3667855994721234672
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 698296741725185137}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe208a05ce1fa154db40b803409e69c2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::ForceReceiver
-  drag: 0.1
-  rb: {fileID: 8946009132170747548}

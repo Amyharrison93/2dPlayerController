@@ -14,26 +14,24 @@ public class PlayerDashState : PlayerBaseState
     {
         currentSpeed = stateMachine.PlayerSpeed/stateMachine.playerSprintMult;
         stateMachine.health.SetInvaunrable(true);
+        stateMachine.playerRigidbody.linearVelocityX = 0;
+        stateMachine.IncreaseDashCounter();
 
-        dashForce = stateMachine.PlayerDashForce;
+        dashForce = stateMachine.PlayerDashDistance;
         if(stateMachine.InputReader.MovementValue.x > 0) isDashingRight = true;
-        if(!isDashingRight) dashForce = stateMachine.PlayerDashForce*-1;
-        stateMachine.playerRigidbody.useGravity = false;
-        stateMachine.playerRigidbody.constraints = RigidbodyConstraints.FreezePositionY;
-
-        stateMachine.playerRigidbody.AddForce(dashForce,0,0,ForceMode.Impulse);
+        if(!isDashingRight) dashForce = stateMachine.PlayerDashDistance*-1;
+        
+        stateMachine.playerRigidbody.AddForce(new Vector2(dashForce,1),ForceMode2D.Impulse);
         Debug.Log("Entering Dash state");
     }
     public override void Tick(float DeltaTime)
     {
         dashTimer += Time.deltaTime;
-        if(dashTimer > stateMachine.PlayerDashTimer) stateMachine.SwitchState(new PlayerMovementState(stateMachine));
+        if(dashTimer > stateMachine.PlayerDashTimer) stateMachine.SwitchState(new PlayerFallState(stateMachine));
     }
     public override void Exit()
     {
-        stateMachine.playerRigidbody.useGravity = true;
         stateMachine.health.SetInvaunrable(false);
-        stateMachine.playerRigidbody.constraints = RigidbodyConstraints.None;
         SetConstraints();
     }
 }

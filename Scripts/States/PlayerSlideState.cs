@@ -17,14 +17,13 @@ public class PlayerSlideState : PlayerBaseState
 
         //squish the player
         stateMachine.CrouchDownScale();
+        stateMachine.playerRigidbody.linearVelocityX = 0;
 
-        dashForce = stateMachine.PlayerDashForce;
+        dashForce = stateMachine.PlayerDashDistance;
         if(stateMachine.InputReader.MovementValue.x > 0) isDashingRight = true;
-        if(!isDashingRight) dashForce = stateMachine.PlayerDashForce*-1;
-        stateMachine.playerRigidbody.useGravity = false;
-        stateMachine.playerRigidbody.constraints = RigidbodyConstraints.FreezePositionY;
-
-        stateMachine.playerRigidbody.AddForce(dashForce,0,0,ForceMode.Impulse);
+        if(!isDashingRight) dashForce = stateMachine.PlayerDashDistance*-1;
+        
+        stateMachine.playerRigidbody.AddForce(new Vector2(dashForce,0),ForceMode2D.Impulse);
         Debug.Log("Entering slide state");
     }
     public override void Tick(float DeltaTime)
@@ -35,10 +34,7 @@ public class PlayerSlideState : PlayerBaseState
     public override void Exit()
     {
         stateMachine.StandUpScale();
-        stateMachine.playerRigidbody.useGravity = true;
         stateMachine.health.SetInvaunrable(false);
-        stateMachine.playerRigidbody.constraints = RigidbodyConstraints.None;
-        SetConstraints();
     }
 }
 

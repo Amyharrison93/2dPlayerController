@@ -10,7 +10,10 @@ public class PlayerFallState : PlayerBaseState
 
     public override void Enter()
     {
-        currentSpeed = stateMachine.PlayerSpeed/stateMachine.playerSprintMult;
+        if(stateMachine.isSprinting)
+            currentSpeed = stateMachine.PlayerSpeed*stateMachine.playerSprintMult;
+        if(!stateMachine.isSprinting)
+            currentSpeed = stateMachine.PlayerSpeed;
         
         stateMachine.InputReader.DodgeEvent += OnDash;
         stateMachine.InputReader.JumpEvent += OnJump;

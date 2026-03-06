@@ -21,25 +21,25 @@ public abstract class PlayerBaseState : State
     }
     protected bool CheckIfGrounded()
     {
-        RaycastHit hit;
+        RaycastHit2D hit;
         Debug.DrawRay(stateMachine.playerGameobject.transform.position, 
-        stateMachine.playerGameobject.transform.TransformDirection(Vector3.down),
-        Color.green);
+                    stateMachine.playerGameobject.transform.TransformDirection(Vector3.down), 
+                    Color.green);
 
-        if (Physics.Raycast(
+        hit = Physics2D.Raycast(
             stateMachine.playerGameobject.transform.position, 
-            stateMachine.playerGameobject.transform.TransformDirection(Vector3.down), 
-            out hit, Mathf.Infinity))
+            stateMachine.playerGameobject.transform.TransformDirection(Vector3.down),1,3);
+        // Check if there was a hit and the distance is less than 0.51
+        if (hit) 
         {
-            
-            if(hit.distance < 0.51) return true;
+            float distance = Mathf.Abs(hit.point.y - stateMachine.playerGameobject.transform.position.y);
+            if(distance < 0.52f) return true;
         }
         return false;
     }
     protected void SetConstraints()
     {
-        stateMachine.playerRigidbody.constraints = RigidbodyConstraints.FreezePositionZ;
-        stateMachine.playerRigidbody.constraints = RigidbodyConstraints.FreezeRotation;
+        stateMachine.playerRigidbody.constraints = RigidbodyConstraints2D.FreezeRotation;
     }
     private bool CheckCanJump()
     {
@@ -53,7 +53,8 @@ public abstract class PlayerBaseState : State
     }
     private bool CheckCanDash()
     {
-        if(stateMachine.PlayerDashDelay > stateMachine.PlayerDashTimer) return false;
+        if(stateMachine.PlayerDashDelay > stateMachine.PlayerDashTimer)return false;
+        if(stateMachine.PlayerDashCounter>=stateMachine.PlayerDashCount) return false;
         return true;
     }
     protected void OnDash()

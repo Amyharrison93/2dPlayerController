@@ -1,22 +1,24 @@
-using System.Collections;
-using System.Collections.Generic;
-using Unity.VisualScripting;
 using UnityEngine;
 
 public class PlayerStateMachine : StateMachine
 {
     [field:SerializeField] public InputController InputReader { get; private set; }
     [field:SerializeField] public ForceReceiver forceReceiver {get; private set;}
+    [field:SerializeField] public SoundHander soundHander {get; private set;}
     [field:SerializeField] public GameObject playerGameobject { get; private set;}
     [field:SerializeField] public Rigidbody2D playerRigidbody {get; private set;} 
+    [field:SerializeField] public Vector3 PlayerRespawnPoint {get; private set;}
     [field: SerializeField] public float PreviousDodgeTime { get; private set; } = Mathf.NegativeInfinity;
     [field: SerializeField] public float MovementDeadZone { get; private set; }
     [field: SerializeField] public float PlayerSpeed { get; private set; }
     [field:SerializeField] public float playerSprintMult {get;private set;}
+    [field: SerializeField] public float PlayerActionCost { get; private set; }
+    [field: SerializeField] public float PlayerSpellCost { get; private set; }
     [field: SerializeField] public float PlayerSprintSpeed { get; private set; }
     [field: SerializeField] public float PlayerJumpHeight { get; private set; }
     [field: SerializeField] public float PlayerJumpCount { get; private set; }
     [field: SerializeField] public float PlayerJumpCounter { get; private set; }
+    [field: SerializeField] public float jumpForceTime { get; private set; }
     [field: SerializeField] public float PlayerDashDistance {get;private set;}
     [field: SerializeField] public float PlayerDashCount {get;private set;}
     [field: SerializeField] public float PlayerDashCounter {get;private set;}
@@ -24,6 +26,7 @@ public class PlayerStateMachine : StateMachine
     [field: SerializeField] public float PlayerDashDelay {get;private set;}
     [field: SerializeField] public int PlayerId { get; private set; } = 1;
     [field: SerializeField] public HealthHandler health { get; private set; }
+    [field: SerializeField] public ResourceHandler resourceHandler {get; private set;}
     [field:SerializeField] public bool isSprinting;
     private void Start()
     {
@@ -37,10 +40,11 @@ public class PlayerStateMachine : StateMachine
 
         SwitchState(new PlayerMovementState(this));
         PlayerSprintSpeed = PlayerSpeed*playerSprintMult;
+        SetRespawnPoint(transform.position);
     }
-    private void InitializePlayer()
+    public void SetRespawnPoint(Vector3 spawnPoint)
     {
-
+        PlayerRespawnPoint = spawnPoint;
     }
     private void OnEnable()
     {
@@ -58,7 +62,8 @@ public class PlayerStateMachine : StateMachine
     }
     private void HandleDeath()
     {
-        health.OnDeath -= HandleDeath;
+        //health.OnDeath -= HandleDeath;
+        transform.position = PlayerRespawnPoint;
         //SwitchState(new PlayerDeathState(this));
     }
     public void CountDashDelay()
@@ -88,11 +93,11 @@ public class PlayerStateMachine : StateMachine
     public void CrouchDownScale()
     {
         playerGameobject.transform.localScale -= new Vector3(0,0.25f,0);
-        //playerGameobject.transform.Translate(new Vector3(0,-0.2f,0));
+        playerGameobject.transform.Translate(new Vector3(0,-0.2f,0));
     }
     public void StandUpScale()
     {
         playerGameobject.transform.localScale = new Vector3(1,1,1);
-        //playerGameobject.transform.Translate(new Vector3(0,0.25f,0));
+        playerGameobject.transform.Translate(new Vector3(0,0.25f,0));
     }
 }

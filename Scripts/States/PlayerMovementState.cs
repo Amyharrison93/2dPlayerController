@@ -21,6 +21,7 @@ public class PlayerMovementState : PlayerBaseState
         CyoteeTime=0;
         stateMachine.isSprinting = false;
 
+        stateMachine.resourceHandler.ResetResources();
         stateMachine.ClearJumpCounter();
         stateMachine.ClearDashCounter();
 
@@ -29,7 +30,8 @@ public class PlayerMovementState : PlayerBaseState
     public override void Tick(float DeltaTime)
     {
         stateMachine.CountDashDelay();
-        MoveHorizontal(stateMachine.InputReader.MovementValue.x*currentSpeed, Time.deltaTime);
+        //MoveHorizontal(stateMachine.InputReader.MovementValue.x*stateMachine.PlayerSpeed, Time.deltaTime);
+        stateMachine.forceReceiver.AddForce(new Vector2 (stateMachine.InputReader.MovementValue.x*stateMachine.PlayerSpeed,0));
         
         if(Mathf.Abs(stateMachine.InputReader.MovementValue.x)< 0.9) 
         {

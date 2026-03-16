@@ -1,17 +1,20 @@
 using UnityEngine;
-using UnityEngine.U2D.IK;
 
 public class PlayerJumpState : PlayerBaseState
 {
     public PlayerJumpState(PlayerStateMachine stateMachine) : base(stateMachine) { }
     [field: SerializeField] private float currentSpeed;
     [field: SerializeField] private bool isSprinting;
-    private Vector3 Momentum;
-    private float maxJumpTimer;
-    private float maxJumpTime=.5f;
+    [field: SerializeField] private float jumpForceTimer;
+    [field: SerializeField] private float jumpForceConst = 5;
+    private float jumpForce;
 
     public override void Enter()
     {
+        stateMachine.soundHander.PlayJumpSound();
+        jumpForceTimer = 0;
+        stateMachine.playerRigidbody.gravityScale = 3;
+        if(stateMachine.PlayerJumpCounter > 1) stateMachine.ClearDashCounter();
         if(stateMachine.isSprinting)
             currentSpeed = stateMachine.PlayerSpeed*stateMachine.playerSprintMult;
         if(!stateMachine.isSprinting)
@@ -22,26 +25,24 @@ public class PlayerJumpState : PlayerBaseState
 
         //clear y velocity
         stateMachine.playerRigidbody.linearVelocityY = 0;
-        
+
         stateMachine.playerRigidbody.AddForce(new Vector2(0,stateMachine.PlayerJumpHeight),ForceMode2D.Impulse);
         stateMachine.IncreaseJumpCounter();
         Debug.Log("Entering jump state");
-        maxJumpTimer=0;
     }
     public override void Tick(float DeltaTime)
     {
-        if (stateMachine.InputReader.IsJumping && maxJumpTime > maxJumpTimer)
+        if(jumpForceTimer < stateMachine.jumpForceTime && stateMachine.InputReader.IsJumping)
         {
-            maxJumpTimer+=Time.deltaTime;
-            stateMachine.playerRigidbody.AddForce(new Vector2(0,stateMachine.PlayerJumpHeight*1+maxJumpTimer),ForceMode2D.Force);
+            stateMachine.playerRigidbody.AddForce(new Vector2(0,jumpForceConst),ForceMode2D.Force);
+            jumpForceTimer += Time.deltaTime;
         }
-        MoveHorizontal(stateMachine.InputReader.MovementValue.x*currentSpeed, Time.deltaTime);
-        
+        stateMachine.forceReceiver.AddForce(new Vector2 (stateMachine.InputReader.MovementValue.x*stateMachine.PlayerSpeed,0));
         if(stateMachine.playerRigidbody.linearVelocityY < -0.5) stateMachine.SwitchState(new PlayerFallState(stateMachine));
     }
     public override void Exit()
     {
-        maxJumpTimer=0;
+        stateMachine.playerRigidbody.gravityScale = 1;
         stateMachine.InputReader.DodgeEvent -= OnDash;
         stateMachine.InputReader.JumpEvent -= OnJump;
     }

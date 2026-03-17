@@ -23,7 +23,7 @@ public class PlayerFallState : PlayerBaseState
     }
     public override void Tick(float DeltaTime)
     {
-        stateMachine.forceReceiver.AddForce(new Vector2 (stateMachine.InputReader.MovementValue.x*stateMachine.PlayerSpeed,0));
+        stateMachine.forceReceiver.AddForce(new Vector2 (stateMachine.InputReader.MovementValue.x*stateMachine.PlayerSpeed,Physics.gravity.z*3));
         if(CheckIfGrounded()) {
             stateMachine.SwitchState(new PlayerMovementState(stateMachine));
             stateMachine.soundHander.PlayLandSound();

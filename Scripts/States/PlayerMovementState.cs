@@ -30,8 +30,11 @@ public class PlayerMovementState : PlayerBaseState
     public override void Tick(float DeltaTime)
     {
         stateMachine.CountDashDelay();
-        //MoveHorizontal(stateMachine.InputReader.MovementValue.x*stateMachine.PlayerSpeed, Time.deltaTime);
         stateMachine.forceReceiver.AddForce(new Vector2 (stateMachine.InputReader.MovementValue.x*stateMachine.PlayerSpeed,0));
+
+        //stateMachine.PlayerAnimator.SetFloat("XAxisMovement", stateMachine.forceReceiver.Velocity.normalized.x);
+        
+        stateMachine.PlayerAnimator.HandleMoveAnimations(stateMachine.forceReceiver.Velocity.normalized.x);
         
         if(Mathf.Abs(stateMachine.InputReader.MovementValue.x)< 0.9) 
         {

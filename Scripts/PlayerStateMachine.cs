@@ -8,6 +8,7 @@ public class PlayerStateMachine : StateMachine
     [field:SerializeField] public GameObject playerGameobject { get; private set;}
     [field:SerializeField] public Rigidbody2D playerRigidbody {get; private set;} 
     [field:SerializeField] public Vector3 PlayerRespawnPoint {get; private set;}
+    [field: SerializeField] public AnimationController PlayerAnimator {get; private set;}
     [field: SerializeField] public float PreviousDodgeTime { get; private set; } = Mathf.NegativeInfinity;
     [field: SerializeField] public float MovementDeadZone { get; private set; }
     [field: SerializeField] public float PlayerSpeed { get; private set; }

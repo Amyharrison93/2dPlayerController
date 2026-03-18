@@ -7,7 +7,7 @@ public abstract class StateMachine : MonoBehaviour
     private State CurrentState;
     public State PreviousState {get; private set;}
 
-    private void FixedUpdate()
+    private void Update()
     {
         CurrentState?.Tick(Time.deltaTime);
     }

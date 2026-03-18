@@ -41,6 +41,7 @@ public class PlayerStateMachine : StateMachine
         SwitchState(new PlayerMovementState(this));
         PlayerSprintSpeed = PlayerSpeed*playerSprintMult;
         SetRespawnPoint(transform.position);
+        forceReceiver.SetMaxVelocity(new Vector2(PlayerSpeed, PlayerSpeed));
     }
     public void SetRespawnPoint(Vector3 spawnPoint)
     {

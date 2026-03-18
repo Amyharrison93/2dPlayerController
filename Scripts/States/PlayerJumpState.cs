@@ -13,7 +13,7 @@ public class PlayerJumpState : PlayerBaseState
     {
         stateMachine.soundHander.PlayJumpSound();
         jumpForceTimer = 0;
-        stateMachine.playerRigidbody.gravityScale = 3;
+        //stateMachine.playerRigidbody.gravityScale = 3;
         if(stateMachine.PlayerJumpCounter > 1) stateMachine.ClearDashCounter();
         if(stateMachine.isSprinting)
             currentSpeed = stateMachine.PlayerSpeed*stateMachine.playerSprintMult;
@@ -23,10 +23,9 @@ public class PlayerJumpState : PlayerBaseState
         stateMachine.InputReader.DodgeEvent += OnDash;
         stateMachine.InputReader.JumpEvent += OnJump;
 
-        //clear y velocity
-        stateMachine.playerRigidbody.linearVelocityY = 0;
+        stateMachine.forceReceiver.ClearVerticleVelocity();
 
-        stateMachine.playerRigidbody.AddForce(new Vector2(0,stateMachine.PlayerJumpHeight),ForceMode2D.Impulse);
+        stateMachine.forceReceiver.AddImpulse(new Vector2(0,stateMachine.PlayerJumpHeight));
         stateMachine.IncreaseJumpCounter();
         Debug.Log("Entering jump state");
     }
@@ -34,15 +33,15 @@ public class PlayerJumpState : PlayerBaseState
     {
         if(jumpForceTimer < stateMachine.jumpForceTime && stateMachine.InputReader.IsJumping)
         {
-            stateMachine.playerRigidbody.AddForce(new Vector2(0,jumpForceConst),ForceMode2D.Force);
+            stateMachine.forceReceiver.AddForce(new(0,jumpForceConst));
             jumpForceTimer += Time.deltaTime;
         }
-        stateMachine.forceReceiver.AddForce(new Vector2 (stateMachine.InputReader.MovementValue.x*stateMachine.PlayerSpeed,0));
-        if(stateMachine.playerRigidbody.linearVelocityY < -0.5) stateMachine.SwitchState(new PlayerFallState(stateMachine));
+        stateMachine.forceReceiver.AddForce(new(stateMachine.InputReader.MovementValue.x*stateMachine.PlayerSpeed,0));
+        if(stateMachine.forceReceiver.Velocity.y < -0.5) stateMachine.SwitchState(new PlayerFallState(stateMachine));
     }
     public override void Exit()
     {
-        stateMachine.playerRigidbody.gravityScale = 1;
+        //stateMachine.playerRigidbody.gravityScale = 1;
         stateMachine.InputReader.DodgeEvent -= OnDash;
         stateMachine.InputReader.JumpEvent -= OnJump;
     }

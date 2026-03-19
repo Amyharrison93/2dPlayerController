@@ -10,7 +10,6 @@ public class PlayerFallState : PlayerBaseState
 
     public override void Enter()
     {
-        stateMachine.playerRigidbody.gravityScale = 3;
         if(stateMachine.isSprinting)
             currentSpeed = stateMachine.PlayerSpeed*stateMachine.playerSprintMult;
         if(!stateMachine.isSprinting)
@@ -33,7 +32,6 @@ public class PlayerFallState : PlayerBaseState
     }
     public override void Exit()
     {
-        stateMachine.playerRigidbody.gravityScale = 1;
         stateMachine.InputReader.DodgeEvent -= OnDash;
         stateMachine.InputReader.JumpEvent -= OnJump;
     }

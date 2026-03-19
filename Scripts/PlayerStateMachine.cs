@@ -20,6 +20,7 @@ public class PlayerStateMachine : StateMachine
     [field: SerializeField] public float PlayerJumpCount { get; private set; }
     [field: SerializeField] public float PlayerJumpCounter { get; private set; }
     [field: SerializeField] public float jumpForceTime { get; private set; }
+    [field: SerializeField] public float jumpConstForce { get; private set; }
     [field: SerializeField] public float PlayerDashDistance {get;private set;}
     [field: SerializeField] public float PlayerDashCount {get;private set;}
     [field: SerializeField] public float PlayerDashCounter {get;private set;}

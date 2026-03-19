@@ -3,13 +3,13 @@ using UnityEngine;
 public class CheckpointHandler : MonoBehaviour
 {
     private PlayerStateMachine playerStateMachine;
-    private void OnCollisionEnter2D(Collision2D collision)
+    private void OnTriggerEnter2D(Collider2D collision)
     {
-        playerStateMachine = collision.collider.GetComponent<PlayerStateMachine>();
+        playerStateMachine = collision.GetComponent<PlayerStateMachine>();
         if(playerStateMachine == null) return;
         if(playerStateMachine.PlayerRespawnPoint != transform.position)
         {
-            playerStateMachine.SetRespawnPoint(transform.position);
+            playerStateMachine.SetRespawnPoint(playerStateMachine.transform.position);
             Debug.Log("new spawn point set");
         }
     }

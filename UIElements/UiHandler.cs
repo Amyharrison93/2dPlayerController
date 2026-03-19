@@ -9,6 +9,7 @@ public class UiHandler : MonoBehaviour
     [field: SerializeField] public Slider healthSlider {get; private set;}
     [field: SerializeField] public Slider manaSlider {get; private set;}
     [field: SerializeField] public Slider staminaSlider {get; private set;}
+    [field: SerializeField] public Text deathCounterText {get; private set;}
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -35,5 +36,9 @@ public class UiHandler : MonoBehaviour
     private void UpdateStamina()
     {
         staminaSlider.value = staminaHandler.CurrentStamina;
+    }
+    public void UpdateDeathCounter()
+    {
+        deathCounterText.text = "Deaths: " + "1";
     }
 }

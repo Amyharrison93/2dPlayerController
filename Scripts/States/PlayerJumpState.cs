@@ -6,7 +6,6 @@ public class PlayerJumpState : PlayerBaseState
     [field: SerializeField] private float currentSpeed;
     [field: SerializeField] private bool isSprinting;
     [field: SerializeField] private float jumpForceTimer;
-    [field: SerializeField] private float jumpForceConst = 5;
     private float jumpForce;
 
     public override void Enter()
@@ -34,7 +33,7 @@ public class PlayerJumpState : PlayerBaseState
         stateMachine.PlayerAnimator.HandleVerticleMoveAnimation(stateMachine.forceReceiver.Velocity.normalized);
         if(jumpForceTimer < stateMachine.jumpForceTime && stateMachine.InputReader.IsJumping)
         {
-            stateMachine.forceReceiver.AddForce(new(0,jumpForceConst));
+            stateMachine.forceReceiver.AddForce(new(0,stateMachine.jumpConstForce));
             jumpForceTimer += Time.deltaTime;
         }
         stateMachine.forceReceiver.AddForce(new(stateMachine.InputReader.MovementValue.x*stateMachine.PlayerSpeed,0));

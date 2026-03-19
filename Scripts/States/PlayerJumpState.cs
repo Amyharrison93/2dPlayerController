@@ -12,8 +12,8 @@ public class PlayerJumpState : PlayerBaseState
     public override void Enter()
     {
         stateMachine.soundHander.PlayJumpSound();
+        stateMachine.PlayerAnimator.RestartJumpAnimation();
         jumpForceTimer = 0;
-        //stateMachine.playerRigidbody.gravityScale = 3;
         if(stateMachine.PlayerJumpCounter > 1) stateMachine.ClearDashCounter();
         if(stateMachine.isSprinting)
             currentSpeed = stateMachine.PlayerSpeed*stateMachine.playerSprintMult;
@@ -31,6 +31,7 @@ public class PlayerJumpState : PlayerBaseState
     }
     public override void Tick(float DeltaTime)
     {
+        stateMachine.PlayerAnimator.HandleVerticleMoveAnimation(stateMachine.forceReceiver.Velocity.normalized);
         if(jumpForceTimer < stateMachine.jumpForceTime && stateMachine.InputReader.IsJumping)
         {
             stateMachine.forceReceiver.AddForce(new(0,jumpForceConst));
@@ -41,7 +42,6 @@ public class PlayerJumpState : PlayerBaseState
     }
     public override void Exit()
     {
-        //stateMachine.playerRigidbody.gravityScale = 1;
         stateMachine.InputReader.DodgeEvent -= OnDash;
         stateMachine.InputReader.JumpEvent -= OnJump;
     }

@@ -6,6 +6,7 @@ public class AnimationController : MonoBehaviour
     [field: SerializeField] public string MoveAnimationName {get; private set;}
     [field: SerializeField] public string MoveAnimationValue {get; private set;}
     [field: SerializeField] public string jumpAnimationName {get; private set;}
+    private bool wasRight;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -21,18 +22,20 @@ public class AnimationController : MonoBehaviour
     {
         if(value == 0)
         {
-            if(animator.GetCurrentAnimatorStateInfo(0).IsName("Player_Idle")) return;
-            animator.Play("Player_Idle");
+            if(wasRight)animator.Play("KiwiIdleRight");
+            else animator.Play("KiwiIdleLeft");
         }
         if(value > 0.1)
         {
             if(animator.GetCurrentAnimatorStateInfo(0).IsName("KiwiRunRight")) return;
             animator.Play("KiwiRunRight");
+            wasRight = true;
         }
         if(value < -0.9)
         {
             if(animator.GetCurrentAnimatorStateInfo(0).IsName("KiwiRunLeft")) return;
             animator.Play("KiwiRunLeft");
+            wasRight = false;
         }
     }
     public void HandleVerticleMoveAnimation(Vector2 value)

@@ -10,10 +10,11 @@ public class PlayerFallState : PlayerBaseState
 
     public override void Enter()
     {
-        if(stateMachine.isSprinting)
-            currentSpeed = stateMachine.PlayerSpeed*stateMachine.playerSprintMult;
-        if(!stateMachine.isSprinting)
-            currentSpeed = stateMachine.PlayerSpeed;
+        // if(stateMachine.isSprinting)
+        //     currentSpeed = stateMachine.PlayerSpeed*stateMachine.playerSprintMult;
+        // if(!stateMachine.isSprinting)
+        
+        currentSpeed = stateMachine.PlayerSpeed;
         
         stateMachine.InputReader.DodgeEvent += OnDash;
         stateMachine.InputReader.JumpEvent += OnJump;
@@ -23,6 +24,7 @@ public class PlayerFallState : PlayerBaseState
     public override void Tick(float DeltaTime)
     {
         stateMachine.PlayerAnimator.HandleVerticleMoveAnimation(stateMachine.forceReceiver.Velocity.normalized);
+        
         stateMachine.forceReceiver.AddForce(new Vector2 (stateMachine.InputReader.MovementValue.x*stateMachine.PlayerSpeed,Physics.gravity.z*3));
         if(CheckIfGrounded()) {
             stateMachine.SwitchState(new PlayerMovementState(stateMachine));
@@ -32,6 +34,7 @@ public class PlayerFallState : PlayerBaseState
     }
     public override void Exit()
     {
+        stateMachine.forceReceiver.ClearVerticleVelocity();
         stateMachine.InputReader.DodgeEvent -= OnDash;
         stateMachine.InputReader.JumpEvent -= OnJump;
     }

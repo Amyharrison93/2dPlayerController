@@ -16,12 +16,11 @@ public class PlayerMovementState : PlayerBaseState
         currentSpeed = stateMachine.PlayerSpeed;
         stateMachine.InputReader.DodgeEvent += OnDash;
         stateMachine.InputReader.JumpEvent += OnJump;
-        stateMachine.InputReader.SprintEvent +=OnSprint;
-        stateMachine.InputReader.CrouchEvent += OnCrouch;
         CyoteeTime=0;
         stateMachine.isSprinting = false;
 
         stateMachine.resourceHandler.ResetResources();
+        
         stateMachine.ClearJumpCounter();
         stateMachine.ClearDashCounter();
 
@@ -31,9 +30,7 @@ public class PlayerMovementState : PlayerBaseState
     {
         stateMachine.CountDashDelay();
         stateMachine.forceReceiver.AddForce(new Vector2 (stateMachine.InputReader.MovementValue.x*stateMachine.PlayerSpeed,0));
-
-        //stateMachine.PlayerAnimator.SetFloat("XAxisMovement", stateMachine.forceReceiver.Velocity.normalized.x);
-        
+   
         stateMachine.PlayerAnimator.HandleMoveAnimations(stateMachine.forceReceiver.Velocity.normalized.x);
         
         if(Mathf.Abs(stateMachine.InputReader.MovementValue.x)< 0.9) 
@@ -57,8 +54,6 @@ public class PlayerMovementState : PlayerBaseState
         Debug.Log("Exiting movement state");
         stateMachine.InputReader.DodgeEvent -= OnDash;
         stateMachine.InputReader.JumpEvent -= OnJump;
-        stateMachine.InputReader.SprintEvent -=OnSprint;
-        stateMachine.InputReader.CrouchEvent -= OnCrouch;
     }
     private void OnSprint()
     {

@@ -1,0 +1,1092 @@
+fileFormatVersion: 2
+guid: 90a5fdb91d562344c9aa06f968801e53
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -9109014319039313073
+    second: congratulationsScreen_0
+  - first:
+      213: -3108648750194516309
+    second: congratulationsScreen_1
+  - first:
+      213: 1384660967294484132
+    second: congratulationsScreen_2
+  - first:
+      213: 2645671003466562081
+    second: congratulationsScreen_3
+  - first:
+      213: -5098815909874595002
+    second: congratulationsScreen_4
+  - first:
+      213: 7374903468168363464
+    second: congratulationsScreen_5
+  - first:
+      213: -2089748798520509470
+    second: congratulationsScreen_6
+  - first:
+      213: 7602339764921458373
+    second: congratulationsScreen_7
+  - first:
+      213: -1584020453091658916
+    second: congratulationsScreen_8
+  - first:
+      213: 2110614368609673328
+    second: congratulationsScreen_9
+  - first:
+      213: 4433467097914962756
+    second: congratulationsScreen_10
+  - first:
+      213: -497522240445695265
+    second: congratulationsScreen_11
+  - first:
+      213: -7688697796940857557
+    second: congratulationsScreen_12
+  - first:
+      213: -1547534236755504946
+    second: congratulationsScreen_13
+  - first:
+      213: 8858371768487555078
+    second: congratulationsScreen_14
+  - first:
+      213: -7231166331865283416
+    second: congratulationsScreen_15
+  - first:
+      213: 99268158717712831
+    second: congratulationsScreen_16
+  - first:
+      213: -7231500545569143684
+    second: congratulationsScreen_17
+  - first:
+      213: -2691996373822403190
+    second: congratulationsScreen_18
+  - first:
+      213: -8931125204353755641
+    second: congratulationsScreen_19
+  - first:
+      213: -6670706799839504954
+    second: congratulationsScreen_20
+  - first:
+      213: -359414183512762303
+    second: congratulationsScreen_21
+  - first:
+      213: 7282924700016082683
+    second: congratulationsScreen_22
+  - first:
+      213: -722108229190565416
+    second: congratulationsScreen_23
+  - first:
+      213: 5283771423693958485
+    second: congratulationsScreen_24
+  - first:
+      213: -8048920543868645045
+    second: congratulationsScreen_25
+  - first:
+      213: 985554598175104223
+    second: congratulationsScreen_26
+  - first:
+      213: 3528734052420284875
+    second: congratulationsScreen_27
+  - first:
+      213: 8261326016472555163
+    second: congratulationsScreen_28
+  - first:
+      213: 4216749093958525888
+    second: congratulationsScreen_29
+  - first:
+      213: -1122949693436447627
+    second: congratulationsScreen_30
+  - first:
+      213: -5024676459055284965
+    second: congratulationsScreen_31
+  - first:
+      213: -2194269167647561865
+    second: congratulationsScreen_32
+  - first:
+      213: -8715435148430959243
+    second: congratulationsScreen_33
+  - first:
+      213: -6910590650337139350
+    second: congratulationsScreen_34
+  - first:
+      213: -2204314503878902445
+    second: congratulationsScreen_35
+  - first:
+      213: -8162552314291260372
+    second: congratulationsScreen_36
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: congratulationsScreen_0
+      rect:
+        serializedVersion: 2
+        x: 177
+        y: 845
+        width: 101
+        height: 133
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f4b07bb0db7469180800000000000000
+      internalID: -9109014319039313073
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: congratulationsScreen_1
+      rect:
+        serializedVersion: 2
+        x: 279
+        y: 844
+        width: 113
+        height: 133
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bae91399e6cdbd4d0800000000000000
+      internalID: -3108648750194516309
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: congratulationsScreen_2
+      rect:
+        serializedVersion: 2
+        x: 392
+        y: 844
+        width: 127
+        height: 133
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4aebfe140dd473310800000000000000
+      internalID: 1384660967294484132
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: congratulationsScreen_3
+      rect:
+        serializedVersion: 2
+        x: 520
+        y: 840
+        width: 113
+        height: 137
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 12afc22a2cf47b420800000000000000
+      internalID: 2645671003466562081
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: congratulationsScreen_4
+      rect:
+        serializedVersion: 2
+        x: 635
+        y: 842
+        width: 106
+        height: 137
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 64b80d4d1fd5d39b0800000000000000
+      internalID: -5098815909874595002
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: congratulationsScreen_5
+      rect:
+        serializedVersion: 2
+        x: 742
+        y: 839
+        width: 109
+        height: 136
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8cdb8f061abe85660800000000000000
+      internalID: 7374903468168363464
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: congratulationsScreen_6
+      rect:
+        serializedVersion: 2
+        x: 849
+        y: 841
+        width: 100
+        height: 139
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2ebb26a2a88bff2e0800000000000000
+      internalID: -2089748798520509470
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: congratulationsScreen_7
+      rect:
+        serializedVersion: 2
+        x: 948
+        y: 844
+        width: 112
+        height: 135
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5ce58fdbcbfe08960800000000000000
+      internalID: 7602339764921458373
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: congratulationsScreen_8
+      rect:
+        serializedVersion: 2
+        x: 1061
+        y: 842
+        width: 86
+        height: 136
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c53b4885acd640ae0800000000000000
+      internalID: -1584020453091658916
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: congratulationsScreen_9
+      rect:
+        serializedVersion: 2
+        x: 1146
+        y: 839
+        width: 109
+        height: 136
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 070a0d2f5986a4d10800000000000000
+      internalID: 2110614368609673328
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: congratulationsScreen_10
+      rect:
+        serializedVersion: 2
+        x: 1254
+        y: 841
+        width: 100
+        height: 139
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4437a9606d6d68d30800000000000000
+      internalID: 4433467097914962756
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: congratulationsScreen_11
+      rect:
+        serializedVersion: 2
+        x: 1354
+        y: 843
+        width: 58
+        height: 133
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fdab06688227819f0800000000000000
+      internalID: -497522240445695265
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: congratulationsScreen_12
+      rect:
+        serializedVersion: 2
+        x: 1414
+        y: 844
+        width: 113
+        height: 133
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b2ff20417124c4590800000000000000
+      internalID: -7688697796940857557
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: congratulationsScreen_13
+      rect:
+        serializedVersion: 2
+        x: 1527
+        y: 844
+        width: 127
+        height: 133
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ec0de649fcd068ae0800000000000000
+      internalID: -1547534236755504946
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: congratulationsScreen_14
+      rect:
+        serializedVersion: 2
+        x: 1656
+        y: 845
+        width: 101
+        height: 132
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 600bc0590324fea70800000000000000
+      internalID: 8858371768487555078
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: congratulationsScreen_15
+      rect:
+        serializedVersion: 2
+        x: 1759
+        y: 886
+        width: 49
+        height: 90
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8a4c765988cb5ab90800000000000000
+      internalID: -7231166331865283416
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: congratulationsScreen_16
+      rect:
+        serializedVersion: 2
+        x: 1762
+        y: 841
+        width: 42
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fb950e94ddba06100800000000000000
+      internalID: 99268158717712831
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: congratulationsScreen_17
+      rect:
+        serializedVersion: 2
+        x: 359
+        y: 552
+        width: 127
+        height: 138
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c74ce44619c84ab90800000000000000
+      internalID: -7231500545569143684
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: congratulationsScreen_18
+      rect:
+        serializedVersion: 2
+        x: 484
+        y: 555
+        width: 113
+        height: 133
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a8d0da19f8b14aad0800000000000000
+      internalID: -2691996373822403190
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: congratulationsScreen_19
+      rect:
+        serializedVersion: 2
+        x: 598
+        y: 555
+        width: 112
+        height: 135
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 706d4fd12f44e0480800000000000000
+      internalID: -8931125204353755641
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: congratulationsScreen_20
+      rect:
+        serializedVersion: 2
+        x: 754
+        y: 552
+        width: 89
+        height: 139
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6c598ca2283ec63a0800000000000000
+      internalID: -6670706799839504954
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: congratulationsScreen_21
+      rect:
+        serializedVersion: 2
+        x: 844
+        y: 554
+        width: 58
+        height: 133
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1481c7054ba130bf0800000000000000
+      internalID: -359414183512762303
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: congratulationsScreen_22
+      rect:
+        serializedVersion: 2
+        x: 904
+        y: 555
+        width: 127
+        height: 133
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bfe70669d65221560800000000000000
+      internalID: 7282924700016082683
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: congratulationsScreen_23
+      rect:
+        serializedVersion: 2
+        x: 1035
+        y: 554
+        width: 58
+        height: 133
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8d1c5b5346e8af5f0800000000000000
+      internalID: -722108229190565416
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: congratulationsScreen_24
+      rect:
+        serializedVersion: 2
+        x: 1095
+        y: 556
+        width: 101
+        height: 132
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 55d63af7d1ab35940800000000000000
+      internalID: 5283771423693958485
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: congratulationsScreen_25
+      rect:
+        serializedVersion: 2
+        x: 1198
+        y: 554
+        width: 124
+        height: 134
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b419d5d096d7c4090800000000000000
+      internalID: -8048920543868645045
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: congratulationsScreen_26
+      rect:
+        serializedVersion: 2
+        x: 1324
+        y: 552
+        width: 96
+        height: 142
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fdcdaf27fa46dad00800000000000000
+      internalID: 985554598175104223
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: congratulationsScreen_27
+      rect:
+        serializedVersion: 2
+        x: 1422
+        y: 549
+        width: 105
+        height: 141
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bc1f555bce498f030800000000000000
+      internalID: 3528734052420284875
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: congratulationsScreen_28
+      rect:
+        serializedVersion: 2
+        x: 528
+        y: 352
+        width: 100
+        height: 139
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b9e1a89dd3026a270800000000000000
+      internalID: 8261326016472555163
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: congratulationsScreen_29
+      rect:
+        serializedVersion: 2
+        x: 628
+        y: 354
+        width: 124
+        height: 134
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0c3295ca5f6e48a30800000000000000
+      internalID: 4216749093958525888
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: congratulationsScreen_30
+      rect:
+        serializedVersion: 2
+        x: 754
+        y: 352
+        width: 96
+        height: 142
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5743616143b7a60f0800000000000000
+      internalID: -1122949693436447627
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: congratulationsScreen_31
+      rect:
+        serializedVersion: 2
+        x: 894
+        y: 349
+        width: 105
+        height: 141
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b1dfdb2e163c44ab0800000000000000
+      internalID: -5024676459055284965
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: congratulationsScreen_32
+      rect:
+        serializedVersion: 2
+        x: 999
+        y: 352
+        width: 96
+        height: 142
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 77766c851d36c81e0800000000000000
+      internalID: -2194269167647561865
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: congratulationsScreen_33
+      rect:
+        serializedVersion: 2
+        x: 1096
+        y: 353
+        width: 135
+        height: 134
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 57d91daa8ed8c0780800000000000000
+      internalID: -8715435148430959243
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: congratulationsScreen_34
+      rect:
+        serializedVersion: 2
+        x: 1234
+        y: 355
+        width: 113
+        height: 133
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a65e48ada66a810a0800000000000000
+      internalID: -6910590650337139350
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: congratulationsScreen_35
+      rect:
+        serializedVersion: 2
+        x: 1349
+        y: 397
+        width: 49
+        height: 90
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 35d7e0f33a3b861e0800000000000000
+      internalID: -2204314503878902445
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: congratulationsScreen_36
+      rect:
+        serializedVersion: 2
+        x: 1352
+        y: 352
+        width: 42
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c24702ecae9c8be80800000000000000
+      internalID: -8162552314291260372
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      congratulationsScreen_0: -9109014319039313073
+      congratulationsScreen_1: -3108648750194516309
+      congratulationsScreen_10: 4433467097914962756
+      congratulationsScreen_11: -497522240445695265
+      congratulationsScreen_12: -7688697796940857557
+      congratulationsScreen_13: -1547534236755504946
+      congratulationsScreen_14: 8858371768487555078
+      congratulationsScreen_15: -7231166331865283416
+      congratulationsScreen_16: 99268158717712831
+      congratulationsScreen_17: -7231500545569143684
+      congratulationsScreen_18: -2691996373822403190
+      congratulationsScreen_19: -8931125204353755641
+      congratulationsScreen_2: 1384660967294484132
+      congratulationsScreen_20: -6670706799839504954
+      congratulationsScreen_21: -359414183512762303
+      congratulationsScreen_22: 7282924700016082683
+      congratulationsScreen_23: -722108229190565416
+      congratulationsScreen_24: 5283771423693958485
+      congratulationsScreen_25: -8048920543868645045
+      congratulationsScreen_26: 985554598175104223
+      congratulationsScreen_27: 3528734052420284875
+      congratulationsScreen_28: 8261326016472555163
+      congratulationsScreen_29: 4216749093958525888
+      congratulationsScreen_3: 2645671003466562081
+      congratulationsScreen_30: -1122949693436447627
+      congratulationsScreen_31: -5024676459055284965
+      congratulationsScreen_32: -2194269167647561865
+      congratulationsScreen_33: -8715435148430959243
+      congratulationsScreen_34: -6910590650337139350
+      congratulationsScreen_35: -2204314503878902445
+      congratulationsScreen_36: -8162552314291260372
+      congratulationsScreen_4: -5098815909874595002
+      congratulationsScreen_5: 7374903468168363464
+      congratulationsScreen_6: -2089748798520509470
+      congratulationsScreen_7: 7602339764921458373
+      congratulationsScreen_8: -1584020453091658916
+      congratulationsScreen_9: 2110614368609673328
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -31,6 +31,8 @@ public class PlayerJumpState : PlayerBaseState
     public override void Tick(float DeltaTime)
     {
         stateMachine.PlayerAnimator.HandleVerticleMoveAnimation(stateMachine.forceReceiver.Velocity.normalized);
+        stateMachine.forceReceiver.AddForce(new(stateMachine.InputReader.MovementValue.x*stateMachine.PlayerSpeed,0));
+        
         Debug.Log("jump force timer = "+jumpForceTimer + " Jump force time = "+stateMachine.jumpForceTime + " is jump pressed = " + stateMachine.InputReader.IsJumping);
 
         if(jumpForceTimer < stateMachine.jumpForceTime && stateMachine.InputReader.IsJumping)
@@ -42,8 +44,6 @@ public class PlayerJumpState : PlayerBaseState
         {
             if(stateMachine.forceReceiver.Velocity.y < -0.5) stateMachine.SwitchState(new PlayerFallState(stateMachine));
         }
-
-        stateMachine.forceReceiver.AddForce(new(Time.deltaTime*stateMachine.InputReader.MovementValue.x*stateMachine.PlayerSpeed,0));
     }
     public override void Exit()
     {

@@ -1,3 +1,4 @@
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -9,7 +10,7 @@ public class UiHandler : MonoBehaviour
     [field: SerializeField] public Slider healthSlider {get; private set;}
     [field: SerializeField] public Slider manaSlider {get; private set;}
     [field: SerializeField] public Slider staminaSlider {get; private set;}
-    [field: SerializeField] public Text deathCounterText {get; private set;}
+    [field: SerializeField] public TMP_Text deathCounterText {get; private set;}
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -24,6 +25,7 @@ public class UiHandler : MonoBehaviour
         UpdateHealth();
         UpdateMana();
         UpdateStamina();
+        UpdateDeathCounter();
     }
     private void UpdateHealth()
     {
@@ -39,6 +41,6 @@ public class UiHandler : MonoBehaviour
     }
     public void UpdateDeathCounter()
     {
-        deathCounterText.text = "Deaths: " + "1";
+        deathCounterText.text = "Deaths: " + healthHandler.DealthCount;
     }
 }

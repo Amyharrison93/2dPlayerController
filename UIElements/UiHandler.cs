@@ -21,6 +21,7 @@ public class UiHandler : MonoBehaviour
         healthSlider.maxValue = healthHandler.MaxHealth;
         manaSlider.maxValue = manaHandler.MaxMana;
         staminaSlider.maxValue = staminaHandler.MaxStamina;
+        speedrunTimer = FindFirstObjectByType<SpeedrunTimer>();
     }
 
     // Update is called once per frame
@@ -50,7 +51,7 @@ public class UiHandler : MonoBehaviour
     }
     public void UpdateSpeedrunTimer()
     {
-        speedrunTimerText.text = "Time: " + speedrunTimer.TotalTime;
+        speedrunTimerText.text = "Time: " + speedrunTimer.TotalTime.ToString("F2") + "s";
     }
 
 }

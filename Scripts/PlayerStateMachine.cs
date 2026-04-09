@@ -36,9 +36,6 @@ public class PlayerStateMachine : StateMachine
         {
             PlayerId = Random.Range(1, 10000);
         }
-        
-        Cursor.lockState = CursorLockMode.Locked;
-        Cursor.visible = false;
 
         SwitchState(new PlayerMovementState(this));
         PlayerSprintSpeed = PlayerSpeed*playerSprintMult;

@@ -51,6 +51,24 @@ public abstract class PlayerBaseState : State
 
         return isFrontGrounded || isBackGrounded;
     }
+    protected bool CheckIfTouchingWall()
+    {
+        var collider = stateMachine.playerGameobject.GetComponent<Collider2D>();
+        Vector3 position = stateMachine.playerGameobject.transform.position;
+
+        float width = collider.bounds.extents.x;
+        float height = collider.bounds.extents.y;
+        Vector2 frontCorner = new Vector2(position.x + width, position.y);
+        Vector2 backCorner = new Vector2(position.x - width, position.y);
+
+        Debug.DrawRay(frontCorner, Vector2.right * 0.5f, Color.red);
+        Debug.DrawRay(backCorner, Vector2.left * 0.5f, Color.red);
+
+        bool isFrontTouchingWall = CheckRaycast(frontCorner);
+        bool isBackTouchingWall = CheckRaycast(backCorner);
+
+        return isFrontTouchingWall || isBackTouchingWall;
+    }
 
     private bool CheckRaycast(Vector2 origin)
     {

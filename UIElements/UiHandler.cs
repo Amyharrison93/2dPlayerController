@@ -1,3 +1,5 @@
+using System.Runtime.InteropServices;
+using System.Xml.Serialization;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -11,6 +13,8 @@ public class UiHandler : MonoBehaviour
     [field: SerializeField] public Slider manaSlider {get; private set;}
     [field: SerializeField] public Slider staminaSlider {get; private set;}
     [field: SerializeField] public TMP_Text deathCounterText {get; private set;}
+    [field: SerializeField] public TMP_Text speedrunTimerText {get; private set;}
+    [field: SerializeField] public SpeedrunTimer speedrunTimer {get; private set;}
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -20,12 +24,13 @@ public class UiHandler : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
         UpdateHealth();
         UpdateMana();
         UpdateStamina();
         UpdateDeathCounter();
+        UpdateSpeedrunTimer();
     }
     private void UpdateHealth()
     {
@@ -43,4 +48,9 @@ public class UiHandler : MonoBehaviour
     {
         deathCounterText.text = "Deaths: " + healthHandler.DealthCount;
     }
+    public void UpdateSpeedrunTimer()
+    {
+        speedrunTimerText.text = "Time: " + speedrunTimer.TotalTime;
+    }
+
 }

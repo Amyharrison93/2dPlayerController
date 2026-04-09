@@ -20,7 +20,10 @@ public class PlayerJumpState : PlayerBaseState
         currentSpeed = stateMachine.PlayerSpeed;
 
         stateMachine.forceReceiver.ClearVerticleVelocity();
-
+        if(CheckIfTouchingWall()) {
+            //jump away from the wall
+            stateMachine.forceReceiver.AddImpulse(new Vector2(-Mathf.Sign(stateMachine.forceReceiver.Velocity.x)*stateMachine.PlayerSpeed, stateMachine.PlayerJumpHeight));
+        }
         stateMachine.forceReceiver.AddImpulse(new Vector2(0,stateMachine.PlayerJumpHeight));
         stateMachine.IncreaseJumpCounter();
         Debug.Log("Entering jump state");

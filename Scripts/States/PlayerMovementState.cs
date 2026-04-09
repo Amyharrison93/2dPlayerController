@@ -14,7 +14,7 @@ public class PlayerMovementState : PlayerBaseState
     public override void Enter()
     {
         currentSpeed = stateMachine.PlayerSpeed;
-        stateMachine.InputReader.DodgeEvent += OnDash;
+        //stateMachine.InputReader.DodgeEvent += OnDash;
         stateMachine.InputReader.JumpEvent += OnJump;
         CyoteeTime=0;
         stateMachine.isSprinting = false;
@@ -52,7 +52,7 @@ public class PlayerMovementState : PlayerBaseState
     public override void Exit()
     {
         Debug.Log("Exiting movement state");
-        stateMachine.InputReader.DodgeEvent -= OnDash;
+        //stateMachine.InputReader.DodgeEvent -= OnDash;
         stateMachine.InputReader.JumpEvent -= OnJump;
     }
     private void OnSprint()

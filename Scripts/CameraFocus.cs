@@ -15,7 +15,7 @@ public class CameraFocus : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        gameObject.transform.position = Vector3.MoveTowards(gameObject.transform.position,cameraFocus.transform.position,CameraMaxSpeed);
+        gameObject.transform.position = Vector3.MoveTowards(gameObject.transform.position,cameraFocus.transform.position,CameraMaxSpeed*Time.deltaTime);
         gameObject.transform.position = new Vector3(gameObject.transform.position.x,gameObject.transform.position.y,CameraOffset);
     }
 }
